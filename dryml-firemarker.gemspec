@@ -1,9 +1,9 @@
-name    = File.basename( __FILE__, '.gemspec' )
 version = File.read(File.expand_path('../VERSION', __FILE__)).strip
 require 'date'
 
 Gem::Specification.new do |s|
 
+  s.name        = 'dryml-firemarker'
   s.summary     = 'Adds DRYML markers viewable with FireMarker'
   s.description = 'Dryml FireMarker annotates the output of Hobo and Rails apps that use the DRYML templating system.',
   s.authors     = ["Domizio Demichelis"]
@@ -12,7 +12,6 @@ Gem::Specification.new do |s|
 
   s.files       = `git ls-files -z`.split("\0")
 
-  s.name        = name
   s.version     = version
   s.date        = Date.today.to_s
 
