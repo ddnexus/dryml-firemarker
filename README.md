@@ -88,7 +88,7 @@ adding or commenting out the previous statement (and restart the app).
 5. Select the "HTML" tab
 6. Uncheck "Show Comments" in the HTML tab menu
 7. Select the "Markers" tab in the Firebug HTML side panel
-8. Check "dryml" option in the Markers tab menuUsage
+8. Check "dryml" option in the Markers tab menu
 
 ### Usage
 
