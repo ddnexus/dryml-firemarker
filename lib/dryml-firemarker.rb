@@ -1,5 +1,6 @@
 require 'pathname'
 require 'rbconfig'
+require 'dryml-firemarker-shared-overrides'
 
 module DrymlFireMarker
 
