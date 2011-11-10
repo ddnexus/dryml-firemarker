@@ -1,6 +1,6 @@
-DRYML_METAINFO = RAILS_ENV == "development" unless Object.const_defined?( :DRYML_METAINFO )
-
 module DrymlRootModule
+
+  include DrymlFireMarker::SharedOverrides
 
   class TemplateEnvironment
     undef_method :part_contexts_javascripts

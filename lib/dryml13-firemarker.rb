@@ -2,6 +2,9 @@ require 'dryml/template'
 require 'dryml-firemarker'
 
 module Dryml
+
+  include DrymlFireMarker::SharedOverrides
+
   class Template
 
     def wrap_source_with_metadata(content, kind, name, line, *args)
