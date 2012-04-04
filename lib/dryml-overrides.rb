@@ -6,7 +6,7 @@ module DrymlRootModule
     undef_method :part_contexts_javascripts
   end
 
-  if DRYML_METAINFO
+  if defined?(::DRYML_METAINFO) && ::DRYML_METAINFO || ENV['DRYML_METAINFO']
     class Template
       def wrap_source_with_metadata(content, kind, name, line, *args)
         return content if name.in?(NO_METADATA_TAGS)
