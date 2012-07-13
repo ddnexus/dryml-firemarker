@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.description = 'Dryml FireMarker annotates the output of Hobo and Rails apps that use the DRYML templating system.',
   s.authors     = ["Domizio Demichelis"]
   s.email       = 'dd.nexus@gmail.com'
-  s.homepage    = "http://github.com/ddnexus/#{name}"
+  s.homepage    = "http://github.com/ddnexus/dryml-firemarker"
 
   s.files       = `git ls-files -z`.split("\0")
 
