@@ -15,6 +15,8 @@ module DrymlFireMarker
     metadata        = { }
     metadata[kind]  = name
     keys.push(kind)
+    metadata['uid']    = rand(1000000000)
+    keys.push('uid')
     path            = Pathname.new(template_path).realpath.to_s
     writeable       = path.match(/^#{Regexp.quote(rails_root)}\//) &&
                       ( auto_path.blank? ||! path.match(/^#{Regexp.quote(auto_path)}\//) )
@@ -25,7 +27,7 @@ module DrymlFireMarker
     end
     metadata['path'] = path + ':' + line.to_s + (writeable ? '+' : '')
     keys.push('path')
-    "{#{ keys.map{|k| k.inspect + ':' + metadata[k].inspect}.join(',') }}"
+    "{#{ keys.map{|k| k.inspect + ':' + metadata[k].inspect}.join(',') }"+',"time":#{Time.now.to_f}'+"}"
   end
 
   private
