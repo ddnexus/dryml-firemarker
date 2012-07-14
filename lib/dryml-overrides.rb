@@ -15,7 +15,7 @@ module DrymlRootModule
         <<-source
           <%= timestamp#{uid} = Time.now.to_f; %(<!--[dryml]#{json}-->) %>
           #{content}
-          <%= %(<!--[/dryml]{"time":"\#{(Time.now.to_f - timestamp#{uid})*1000}ms"}-->) %>
+          <%= %(<!--[/dryml]{"time":"\#{((Time.now.to_f - timestamp#{uid})*1000).round}ms"}-->) %>
         source
       end
     end

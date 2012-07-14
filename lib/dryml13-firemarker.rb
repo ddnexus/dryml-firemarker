@@ -14,7 +14,7 @@ module Dryml
       <<-source
         <% timestamp#{uid} = Time.now.to_f; safe_concat(%(<!--[dryml]#{json}-->)) %>
         #{content}
-        <% safe_concat(%(<!--[/dryml]{"time":"\#{(Time.now.to_f - timestamp#{uid})*1000}ms"}-->)) %>
+        <% safe_concat(%(<!--[/dryml]{"time":"\#{((Time.now.to_f - timestamp#{uid})*1000).round}ms"}-->)) %>
       source
     end
 
